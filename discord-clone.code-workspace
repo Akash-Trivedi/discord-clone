@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"editor.fontFamily": "Consolas",
+		"editor.fontSize": 20,
+		"editor.tabSize": 2,
+		"workbench.colorTheme": "Gruvbox Dark Hard",
+		"terminal.integrated.fontSize": 16,
+		"editor.lineHeight": 1.6,
+		"editor.glyphMargin": false,
+	}
+}

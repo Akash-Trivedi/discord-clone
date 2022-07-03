@@ -40,6 +40,8 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
+discord-clone-frontend/node_modules
+discord-clone-backend/node_moduless
 
 # TypeScript v1 declaration files
 typings/
