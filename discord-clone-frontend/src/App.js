@@ -20,9 +20,9 @@ const App = () => {
       <Routes>
         <Route path='/' >
           <Route path='homepage' element={<Homepage />} />
-          <Route path='channel' element={Dashboard} >
-            <Route path=':@me' element={UserChannel} />
-            <Route path=':channelId' element={UserChannel} />
+          <Route path='channels' element={<Dashboard />} >
+            <Route path=':@me' element={<UserChannel />} />
+            <Route path=':channelId' element={<UserChannel />} />
           </Route>
           <Route path='login' element={<Login />} />
           <Route path='register' element={<Register />} />
