@@ -8,7 +8,7 @@
 		"editor.fontFamily": "Consolas",
 		"editor.fontSize": 20,
 		"editor.tabSize": 2,
-		"workbench.colorTheme": "Gruvbox Dark Hard",
+		"workbench.colorTheme": "Plain Theme VSCode",
 		"terminal.integrated.fontSize": 18,
 		"editor.lineHeight": 1.6,
 		"editor.glyphMargin": false,
