@@ -1,0 +1,99 @@
+:root {
+  --server-bg-color: #202225;
+  --channel-bg-color: #2F3136;
+  --channel-btn-color: #42464D;
+  --channel-chat-bg-color: #36393F;
+  --icon-bg-color: #B9BBBE;
+}
+
+* {
+  margin: 0px;
+  padding: 0px
+}
+
+.flex-display {
+  display: flex;
+}
+
+.block-display {
+  display: block;
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+.input {
+  border: 0px;
+  border-radius: .4rem;
+  color: var(--icon-bg-color);
+  background-color: var(--server-bg-color);
+  padding: .5rem;
+  text-transform: capitalize;
+  width: 12rem;
+  margin-bottom: .8rem;
+}
+
+.divider {
+  background-color: var(--server-bg-color);
+}
+
+.input:focus {
+  outline: none;
+}
+
+.server-list {
+  padding: .2rem;
+  background-color: var(--server-bg-color);
+}
+
+
+.channel-panel {
+  width: 15rem;
+  padding: .5rem;
+  color: #ffffff;
+  background-color: var(--channel-bg-color);
+}
+
+
+.channel-list {
+  display: block;
+}
+
+.chat-panel {
+  background-color: var(--channel-chat-bg-color);
+  flex-grow: 1;
+}
+
+.chat-panel-header {
+  display: flex;
+  padding: .5rem;
+  border-bottom: 1px solid var(--channel-bg-color);
+}
+
+.icon {
+  color: var(--icon-bg-color);
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: inherit;
+}
+
+
+.btn {
+  border: 0px;
+  background-color: var(--channel-btn-color);
+}
+
+.chat-panel-header-btn {
+  background-color: var(--channel-btn-color);
+  border: 0px;
+  padding: .5rem;
+  border-radius: .5rem;
+  margin-left: 1rem;
+  color: var(--icon-bg-color);
+  text-transform: capitalize;
+}
+
+.inactive-icon {
+  background-color: var(--channel-chat-bg-color);
+}

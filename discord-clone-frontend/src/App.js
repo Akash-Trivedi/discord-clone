@@ -1,11 +1,11 @@
 /**
  * author: akash trivedi
- * date-created: 
+ * date-created: 07-07-2022 19:54:33
  * functionality: 
  * caller-function: 
  * performs-network-request: 
  */
-
+import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Login from './components/Login'
 import Register from './components/Register'
