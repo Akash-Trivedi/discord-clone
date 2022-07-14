@@ -16,6 +16,7 @@ import {
 import { Outlet, useParams } from 'react-router-dom'
 import UserPanel from './UserPanel'
 import ChatPanel from './ChatPanel'
+import UserChat from './UserChat'
 
 const channels = [
   {
@@ -55,11 +56,9 @@ const Dashboard = () => {
         <UserPanel />
       </div>
       <div className='display-block chat-panel'>
-        <ChatPanel />
+        {/* <ChatPanel /> */}
+        <UserChat />
       </div>
-      {
-
-      }
     </div>
   )
 }

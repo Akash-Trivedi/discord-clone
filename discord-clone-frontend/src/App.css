@@ -4,11 +4,16 @@
   --channel-btn-color: #42464D;
   --channel-chat-bg-color: #36393F;
   --icon-bg-color: #B9BBBE;
+  --new-btn-color: #3BA55D;
 }
 
 * {
   margin: 0px;
   padding: 0px
+}
+
+.bdr-btm {
+  border-bottom: 1px solid var(--server-bg-color);
 }
 
 .flex-display {
@@ -30,7 +35,7 @@
   background-color: var(--server-bg-color);
   padding: .5rem;
   text-transform: capitalize;
-  width: 12rem;
+  width: 14rem;
   margin-bottom: .8rem;
 }
 
@@ -45,6 +50,7 @@
 .server-list {
   padding: .2rem;
   background-color: var(--server-bg-color);
+  height: 100vh;
 }
 
 
@@ -53,7 +59,16 @@
   padding: .5rem;
   color: #ffffff;
   background-color: var(--channel-bg-color);
+  overflow-y: auto;
+  height: 45vh;
 }
+
+.user-chat-profile-photo {
+  height: 7rem;
+  width: 7rem;
+}
+
+
 
 
 .channel-list {
@@ -63,6 +78,7 @@
 .chat-panel {
   background-color: var(--channel-chat-bg-color);
   flex-grow: 1;
+  height: 100vh;
 }
 
 .chat-panel-header {
@@ -73,22 +89,51 @@
 
 .icon {
   color: var(--icon-bg-color);
+  background-color: inherit;
+  border: 0px;
   height: 2.5rem;
   width: 2.5rem;
-  background-color: inherit;
 }
 
+.icon:hover {
+  background-color: var(--channel-chat-bg-color);
+}
+
+.dm-user {
+  text-align: center;
+  background-color: var(--channel-btn-color);
+  border-radius: 4%;
+  margin: .5rem 0rem;
+  padding: .5rem 0rem;
+  width: 15rem;
+}
 
 .btn {
   border: 0px;
   background-color: var(--channel-btn-color);
+  text-transform: capitalize;
+}
+
+.btn:hover {
+  background-color: var(--channel-chat-bg-color)
+}
+
+.btn-wide {
+  width: 15rem;
+  color: var(--icon-bg-color);
+  background-color: var(--channel-btn-color);
+  padding: .6rem .5rem;
+  border: 0px;
+  border-radius: .4rem;
+  margin: .5rem 0rem;
+  text-transform: uppercase;
 }
 
 .chat-panel-header-btn {
   background-color: var(--channel-btn-color);
   border: 0px;
   padding: .5rem;
-  border-radius: .5rem;
+  border-radius: .4rem;
   margin-left: 1rem;
   color: var(--icon-bg-color);
   text-transform: capitalize;
@@ -96,4 +141,71 @@
 
 .inactive-icon {
   background-color: var(--channel-chat-bg-color);
+}
+
+.g-btn {
+  color: #ffffff;
+  background-color: var(--new-btn-color);
+}
+
+.user-name {
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.chat-header,
+.chat {
+  padding: .5rem .8rem;
+}
+
+.user-chat-name-heading {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #ffffff;
+  padding-top: 1rem;
+}
+
+.user-chat-description-heading {
+  color: var(--icon-bg-color);
+  padding: 1rem 0rem;
+}
+
+
+.user-input {
+  padding: 1.2rem 1rem;
+}
+
+.chat {
+  overflow-y: scroll;
+  height: 25rem;
+}
+
+.message {
+  padding-top: 1rem;
+}
+
+.message-profile-icon {
+  color: var(--icon-bg-color);
+  background-color: var(--channel-btn-color);
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+  margin-right: 1rem;
+}
+
+.message-sender {
+  color: #ffffff;
+  text-transform: capitalize;
+  font-weight: 550;
+}
+
+.message-time-stamp {
+  color: var(--icon-bg-color);
+  font-size: .8rem;
+}
+
+.message-message {
+  color: var(--icon-bg-color);
+  margin-top: .5rem;
+  max-width: 50rem;
 }

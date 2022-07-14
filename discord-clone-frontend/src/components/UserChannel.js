@@ -10,6 +10,8 @@ import React from 'react'
 import {
   Divider
 } from '@mui/material'
+import DirectMessageList from './DirectMessageList'
+
 
 const UserChannel = () => {
 
@@ -28,14 +30,13 @@ const UserChannel = () => {
         </div>
 
         <div>
-          <Divider />
+          <Divider className='divider' />
         </div>
 
         <div>
-          <button variant='contained'>
-            Direct Messages +
-          </button>
+          <button className='btn btn-wide'>Direct Messages +</button>
         </div>
+        <DirectMessageList />
       </div >
     </div>
   )

@@ -10,6 +10,7 @@ import React from 'react'
 import {
   EmojiPeople
 } from '@mui/icons-material'
+import UserChat from './UserChat'
 
 const ChatPanel = () => {
   let btnActive = true
@@ -22,10 +23,9 @@ const ChatPanel = () => {
         <div><button className='chat-panel-header-btn inactive-icon'>all</button></div>
         <div><button className='chat-panel-header-btn inactive-icon'>pending</button></div>
         <div><button className='chat-panel-header-btn inactive-icon'>blocked</button></div>
+        <div><button className='chat-panel-header-btn inactive-icon g-btn'>add friend</button></div>
       </header>
-      <div>
-        this is mugordo
-      </div>
+      <UserChat />
     </div >
   )
 }
