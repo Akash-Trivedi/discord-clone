@@ -15,7 +15,7 @@ import UserChat from './UserChat'
 const ChatPanel = () => {
   let btnActive = true
   return (
-    <div className='chat-panel'>
+    <div className='chat-panel grow'>
       <header className='chat-panel-header'>
         <div className='icon'><EmojiPeople /></div>
         <div className='icon'>friends</div>
@@ -25,7 +25,6 @@ const ChatPanel = () => {
         <div><button className='chat-panel-header-btn inactive-icon'>blocked</button></div>
         <div><button className='chat-panel-header-btn inactive-icon g-btn'>add friend</button></div>
       </header>
-      <UserChat />
     </div >
   )
 }

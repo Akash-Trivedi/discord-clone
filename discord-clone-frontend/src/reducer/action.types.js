@@ -6,7 +6,7 @@
  * performs-network-request: 
  */
 
-const actions = {
+const ACTIONS = {
   CREATE_NEW_USER: 'CREATE_NEW_USER',
   LOGIN_USER: 'LOGIN_USER'
 }

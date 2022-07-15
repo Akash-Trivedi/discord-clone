@@ -12,7 +12,7 @@ import {
 } from '@mui/material'
 
 import {
-  Headphones, HeadphonesRounded, Mic,
+  HeadphonesRounded, Mic,
   MicOff, Settings
 } from '@mui/icons-material'
 
@@ -28,7 +28,7 @@ const UserPanel = () => {
     )
   }
   return (
-    <div className='flex-display channel-panel'>
+    <div className='flex-display user-panel'>
       <div><Avatar /></div>
       <div className='block-display grow'>
         <div>{username}</div>

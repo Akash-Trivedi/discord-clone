@@ -11,45 +11,47 @@ import {
   Call, HelpOutline
 } from '@mui/icons-material'
 import SingleMessage from './SingleMessage'
+import AppContext from '../context/AppContext'
 
 
-const UserChat = () => {
-  const username = 'SAGAR a.k.a. aman'
+const UserChat = ({ userId }) => {
+  const { chats } = React.useContext(AppContext).appState
+  const user = chats.userId
   return (
-    <div className="block-display">
+    <div className="grow user-chat">
       <header className='flex-display bdr-btm chat-header'>
-        <div className="user-name grow">@ {username}</div>
-        <div className="icon"><Call /></div>
+        <div className='user-name grow'>@ {userId}</div>
+        <div className='icon'><Call /></div>
         <div>
-          <form method="get">
-            <input type="text" className='input' placeholder='search' />
+          <form method='get'>
+            <input type='text' className='input' placeholder='search' />
           </form>
         </div>
-        <div className="icon"><HelpOutline /></div>
-        <div className="icon"></div>
+        <div className='icon'><HelpOutline /></div>
+        <div className='icon'></div>
       </header>
-      <div className="chat">
-        <div className="chat-heading block-display">
+      <div className='chat'>
+        <div className='chat-heading block-display'>
           <div>
-            <img className="user-chat-profile-photo" src="https://uxwing.com/wp-content/themes/uxwing/download/44-hand-gestures/good.png" alt="profile photo" />
+            <img className='user-chat-profile-photo' src='https://uxwing.com/wp-content/themes/uxwing/download/44-hand-gestures/good.png' alt='profile photo' />
           </div>
-          <div className="user-chat-name-heading">{username}</div>
+          <div className='user-chat-name-heading'>{userId}</div>
           <div className='user-chat-description-heading'>
-            This is the beginning of your direct message history with {username}
+            This is the beginning of your direct message history with {userId}
           </div>
           <hr />
         </div>
-        <div className="actual-chat">
+        <div className='actual-chat'>
           {
-            getChatList().map((messageObject) => (
-              <SingleMessage info={messageObject} />
+            Object.entries(user).map(([key, value]) => (
+              <SingleMessage info={value.message} key={key} />
             ))
           }
         </div>
       </div>
-      <div className="user-input flex-display">
-        <form method="post">
-          <input type="text" className='input grow flex-display' placeholder={`message @ ${username}`} />
+      <div className='user-input flex-display'>
+        <form method='post'>
+          <input type='text' className='input grow flex-display' placeholder={`message @ ${userId}`} />
         </form>
       </div>
     </div >
