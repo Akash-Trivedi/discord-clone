@@ -8,16 +8,17 @@
 
 import React from 'react'
 
-const SingleMessage = ({ info }) => {
+const SingleMessage = (props) => {
+  const icon = 'https://crncompanylimited.com/wp-content/uploads/2019/10/empty-profile-picture.png'
   return (
     <div className="flex-display message">
-      <img src={info.imageUrl} alt="profile-icon" className='message-profile-icon' />
+      <img src={icon} alt="profile-icon" className='message-profile-icon' />
       <div className="message-details block-display">
         <div className="message-sender">
-          {info.sender} <span className='message-time-stamp'>{info.timeStamp}</span>
+          {props.info.sender} <span className='message-time-stamp'>{props.info.timeStamp}</span>
         </div>
         <div className="message-message">
-          {info.message}
+          {props.info.message}
         </div>
       </div>
     </div>

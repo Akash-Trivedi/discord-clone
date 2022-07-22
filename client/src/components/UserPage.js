@@ -16,8 +16,6 @@ import {
 import { Outlet } from 'react-router-dom'
 import AppContext from '../context/AppContext'
 
-const image = 'https://crncompanylimited.com/wp-content/uploads/2019/10/empty-profile-picture.png'
-const channels = [{ imgurl: image }, { imgurl: image }, { imgurl: image }]
 
 const UserPage = () => {
   const { appState, dispatch } = React.useContext(AppContext)
@@ -28,7 +26,7 @@ const UserPage = () => {
         {
           appState.serverList.map(
             (object, id) => (
-              <Avatar sx={{ height: 48, width: 48 }} key={id} src={object.imgurl} alt='channel icon' className='srvr-icon' />
+              <Avatar sx={{ height: 48, width: 48 }} key={id} src={object.icon} alt='channel icon' className='srvr-icon' />
             ))
         }
         <div className='srvr-options'>

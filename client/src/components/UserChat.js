@@ -14,13 +14,15 @@ import SingleMessage from './SingleMessage'
 import AppContext from '../context/AppContext'
 
 
-const UserChat = ({ userId }) => {
+const UserChat = (props) => {
+
   const { chats } = React.useContext(AppContext).appState
-  const user = chats.userId
+  const friend = chats[props.userId]
+
   return (
     <div className="grow user-chat">
       <header className='flex-display bdr-btm chat-header'>
-        <div className='user-name grow'>@ {userId}</div>
+        <div className='user-name grow'>@ {props.userId}</div>
         <div className='icon'><Call /></div>
         <div>
           <form method='get'>
@@ -35,23 +37,25 @@ const UserChat = ({ userId }) => {
           <div>
             <img className='user-chat-profile-photo' src='https://uxwing.com/wp-content/themes/uxwing/download/44-hand-gestures/good.png' alt='profile photo' />
           </div>
-          <div className='user-chat-name-heading'>{userId}</div>
+          <div className='user-chat-name-heading'>{props.userId}</div>
           <div className='user-chat-description-heading'>
-            This is the beginning of your direct message history with {userId}
+            This is the beginning of your direct message history with {props.userId}
           </div>
           <hr />
         </div>
         <div className='actual-chat'>
           {
-            Object.entries(user).map(([key, value]) => (
-              <SingleMessage info={value.message} key={key} />
-            ))
+            friend ?
+              Object.entries(friend).map(([key, value]) => (
+                <SingleMessage info={value} key={key} />
+              )) :
+              (<div>null hai chacha</div>)
           }
         </div>
       </div>
-      <div className='user-input flex-display'>
+      <div className='user-input'>
         <form method='post'>
-          <input type='text' className='input grow flex-display' placeholder={`message @ ${userId}`} />
+          <input type='text' className='input grow flex-display' placeholder={`message @ ${props.userId}`} />
         </form>
       </div>
     </div >

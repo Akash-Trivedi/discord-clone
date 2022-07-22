@@ -5,13 +5,15 @@
 		}
 	],
 	"settings": {
-		"editor.fontFamily": "Inconsolata",
+		"editor.fontFamily": "cascadia code",
 		"editor.fontSize": 20,
 		"editor.tabSize": 2,
-		"workbench.colorTheme": "Gruvbox Dark Hard",
+		"workbench.colorTheme": "JellyFish",
 		"terminal.integrated.fontSize": 16,
+		"terminal.integrated.fontFamily": "Courier New",
 		"editor.lineHeight": 1.6,
 		"editor.glyphMargin": false,
-		"insertDateString.format": "DD-MM-YYYY hh:mm:ss",
+		"insertDateString.format": "DD-MM-YYYY",
+		"workbench.preferredDarkColorTheme": "Default Light+",
 	}
 }

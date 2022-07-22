@@ -10,8 +10,17 @@ import React from 'react'
 import AppContext from '../context/AppContext'
 import ACTIONS from './action.types'
 
-function reducer({ state, action }) {
+function reducer(state, action) {
+  switch (action.type) {
+    case ACTIONS.SET_ACTIVE_FRIEND:
+      console.log(action.payload);
+      return {
+        ...state, activeFriendId: action.payload
+      }
 
+    default:
+      break;
+  }
 }
 const AppState = (props) => {
 
@@ -36,12 +45,19 @@ const AppState = (props) => {
         m2: { id: 15072022182804, message: 'hey wassup main', sender: true, timeStamp: '15-07-2022' },
         m3: { id: 15072022182805, message: 'hey wassup main', sender: true, timeStamp: '15-07-2022' },
         m4: { id: 15072022182806, message: 'hey wassup main', sender: true, timeStamp: '15-07-2022' }
-      }
+      },
+      'sagar': {
+        m1: { id: 15072022182803, message: 'hey wassup main', sender: true, timeStamp: '15-07-2022' },
+        m2: { id: 15072022182804, message: 'hey wassup main', sender: true, timeStamp: '15-07-2022' },
+        m3: { id: 15072022182805, message: 'hey wassup main', sender: true, timeStamp: '15-07-2022' },
+        m4: { id: 15072022182806, message: 'hey wassup main', sender: true, timeStamp: '15-07-2022' }
+      },
     },
     serverList: [
-      { id: 15072022173627, name: 'community classroom', icon: '' },
-      { id: 15072022173627, name: 'love babbar', icon: '' }
-    ]
+      { id: 15072022173627, name: 'community classroom', icon: 'https://crncompanylimited.com/wp-content/uploads/2019/10/empty-profile-picture.png' },
+      { id: 15072022173627, name: 'love babbar', icon: 'https://crncompanylimited.com/wp-content/uploads/2019/10/empty-profile-picture.png' }
+    ],
+    activeFriendId: null
   })
 
   return (

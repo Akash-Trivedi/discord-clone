@@ -131,6 +131,7 @@
 }
 
 .dm-user:hover {
+  cursor: pointer;
   color: var(--chl-btn-color);
   background-color: var(--icon-bg-color);
 }
@@ -203,6 +204,8 @@
 
 
 .user-input {
+  position: absolute;
+  bottom: 0rem;
   padding: 1.2rem 1rem;
 }
 

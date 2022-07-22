@@ -14,13 +14,10 @@ import UserPanel from './UserPanel'
 import UserChat from './UserChat'
 import ChatPanel from './ChatPanel'
 import AppContext from '../context/AppContext'
-
+import ACTIONS from '../reducer/action.types'
 
 const UserChannel = () => {
-  const { friendList } = React.useContext(AppContext).appState
-  const [channelState, setChannelState] = React.useState({
-    activeFriendId: null
-  })
+  const { appState, dispatch } = React.useContext(AppContext)
   return (
     <div className='flex-display channel-container'>
       <div className='channel-list'>
@@ -31,9 +28,11 @@ const UserChannel = () => {
         <div><button className='btn btn-wide'>Direct Messages +</button></div>
         <div className='direct-message-list'>
           {
-            Object.entries(friendList).map(([key, value]) => {
+            Object.entries(appState.friendList).map(([key, value]) => {
               return (
-                <div className='dm-user' key={key} onClick={setChannelState({ activeFriendId: key })}>
+                <div className='dm-user' key={key}
+                  onClick={() => { dispatch({ type: ACTIONS.SET_ACTIVE_FRIEND, payload: key }) }}
+                >
                   {value.fullname}
                 </div>
               )
@@ -43,11 +42,11 @@ const UserChannel = () => {
         <UserPanel />
       </div>
       {
-        channelState.activeFriendId === null ?
-          (<ChatPanel userId={channelState.activeFriendId} />) :
-          (<UserChat userId={channelState.activeFriendId} />)
+        appState.activeFriendId === null ?
+          <ChatPanel userId={appState.activeFriendId} /> :
+          <UserChat userId={appState.activeFriendId} />
       }
-    </div>
+    </div >
   )
 }
 
